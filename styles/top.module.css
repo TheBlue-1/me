@@ -1,0 +1,27 @@
+.top {
+  background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: #192131;
+  background-size: 16px 16px;
+  height: 50vh;
+  overflow: visible;
+}
+#header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: black;
+  color: white;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: calc(min(15vh, 18vw) * 4);
+  text-align: right;
+  padding: 3vh 3vw;
+  font-family: QsB;
+  z-index: 100;
+}
+#topParent {
+  height: 100vh;
+  pointer-events: none;
+}
