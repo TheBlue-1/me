@@ -7,21 +7,26 @@
   height: 50vh;
   overflow: visible;
 }
-#header {
+.top2 {
+  top: 50vh;
+}
+
+.header {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   background-color: black;
   color: white;
   mix-blend-mode: multiply;
-  width: 100%;
   height: calc(min(15vh, 18vw) * 4);
   text-align: right;
   padding: 3vh 3vw;
   font-family: QsB;
   z-index: 100;
+  top: 0;
 }
+
 #topParent {
-  height: 100vh;
-  pointer-events: none;
+  z-index: 50;
+  position: relative;
 }

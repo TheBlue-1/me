@@ -1,0 +1,13 @@
+.footer {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  z-index: -100;
+}
+.footerText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}

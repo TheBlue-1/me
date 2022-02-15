@@ -1,13 +1,75 @@
 * {
-  box-sizing: border-box;
+  /* cursor: inherit;*/
   padding: 0;
   margin: 0;
   border: 0;
+  box-sizing: border-box;
+  pointer-events: auto;
+  outline: none;
+  -ms-user-select: None;
+  -moz-user-select: None;
+  -webkit-user-select: None;
+  color: white;
+  font-weight: 600;
 }
+
 h2 {
   font-size: 44px;
   margin-bottom: 20px;
 }
 h1 {
   font-size: min(15vh, 18vw);
+}
+@font-face {
+  font-family: QsB;
+  src: url(/fonts/Quicksand_Bold.otf);
+}
+
+.scrollElement {
+  position: absolute;
+  width: 100vw;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+ul {
+  padding-left: 25px;
+  list-style: none;
+  font-size: 20px;
+}
+ul li {
+  margin-bottom: 25px;
+}
+
+a {
+  color: lightgrey;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.separator {
+  z-index: -1;
+}
+.page {
+  background: #1b1b1b;
+  height: 100vh;
+  columns: 2;
+  column-gap: 25px;
+  padding: 5vh;
+}
+.page > div {
+  height: 100%;
+  position: relative;
+  margin-bottom: 5vh;
+}
+@media only screen and (max-width: 1000px) {
+  .page {
+    columns: 1;
+  }
+  .page > div {
+    height: 50%;
+  }
 }
