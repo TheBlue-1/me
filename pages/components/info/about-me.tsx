@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 
-import portraitPic from '../../../public/img/avatar.svg';
+import portraitPic from '../../../public/img/portrait.svg';
 
 const AboutMe: NextPage = () => {
   return (
