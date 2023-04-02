@@ -38,7 +38,7 @@ const Profiles: NextPage = () => {
             <a href="https://www.npmjs.com/package/custom-scroll-behaviors">custom-scroll-behaviors-js</a>
           </li>
           <li>
-            <a href="https://jptr.ml">Jupiter - Die WebUntis Alternative</a>
+            <a href="https://jptr.ml">Jupiter - Die WebUntis Alternative (offline)</a>
           </li>
         </ul>
       </div>
