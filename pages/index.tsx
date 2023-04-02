@@ -16,8 +16,12 @@ const Home: NextPage = () => {
       scrollBehavior.scrollHandler.init();
     });
   }, []);
+
+  const [lastClickOnScrollbar, setLastClickOnScrollbar] = React.useState(false);
+  console.log(lastClickOnScrollbar);
   const moveScroll = React.useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!lastClickOnScrollbar) return;
       const movement = e.movementY * 3;
       const pressed = e.buttons & 1;
       pressed && window.scroll({ top: window.scrollY - movement });
@@ -54,14 +58,24 @@ const Home: NextPage = () => {
   );
 
   return (
-    <div className={styles.siteWrapper}>
+    <div
+      onMouseMove={moveScroll}
+      onMouseDown={() => setLastClickOnScrollbar(false)}
+      className={styles.siteWrapper}
+    >
       <Top></Top>
       <AboutMe></AboutMe>
       <Separator1></Separator1>
       <Profiles></Profiles>
       <Footer></Footer>
       {!isMobileLike && (
-        <div onMouseMove={moveScroll} className={styles.scrollBar}>
+        <div
+          onMouseDown={(e) => {
+            setLastClickOnScrollbar(true);
+            e.stopPropagation();
+          }}
+          className={styles.scrollBar}
+        >
           <vertical-scroll-behavior
             on
             start="0"
