@@ -15,7 +15,8 @@ const AboutMe: NextPage = () => {
         <ul>
           <li>Austria, 11.02.2001</li>
           <li>Software Developer</li>
-          <li></li>
+          <li>Working at <a href="https://www.shopstory.ai">Shopstory</a></li>
+          <li>Attended school at <a href="https://www.spengergasse.at">HTBLuVA Spengergasse</a></li>
         </ul>
       </div>
     </div>

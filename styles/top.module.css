@@ -20,7 +20,7 @@
   mix-blend-mode: multiply;
   height: calc(min(15vh, 18vw) * 4);
   text-align: right;
-  padding: 3vh 3vw;
+  padding: 3vh max(3vw, 24px);
   font-family: QsB;
   z-index: 100;
   top: 0;

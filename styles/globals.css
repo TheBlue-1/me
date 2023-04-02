@@ -56,8 +56,9 @@ a:hover {
 .page {
   background: #1b1b1b;
   height: 100vh;
-  columns: 2;
-  column-gap: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
   padding: 5vh;
 }
 .page > div {
@@ -67,7 +68,7 @@ a:hover {
 }
 @media only screen and (max-width: 1000px) {
   .page {
-    columns: 1;
+    grid-template-columns: 1fr;
   }
   .page > div {
     height: 50%;
