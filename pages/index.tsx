@@ -8,6 +8,7 @@ import Top from "./components/top";
 import styles from "/styles/home.module.css";
 
 import type { NextPage } from "next";
+import { useTotalHeight } from "./hooks/use-total-height";
 const Home: NextPage = () => {
   React.useEffect(() => {
     const loadingScrollBehavior = import("custom-scroll-behaviors");
@@ -17,16 +18,19 @@ const Home: NextPage = () => {
     });
   }, []);
 
+  const totalHeight = useTotalHeight();
   const [lastClickOnScrollbar, setLastClickOnScrollbar] = React.useState(false);
-  console.log(lastClickOnScrollbar);
   const moveScroll = React.useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
       if (!lastClickOnScrollbar) return;
-      const movement = e.movementY * 3;
+      const movement = Math.round(
+        e.movementY * (parseFloat(totalHeight) / 100 - 1)
+      );
       const pressed = e.buttons & 1;
-      pressed && window.scroll({ top: window.scrollY - movement });
+
+      pressed && window.scroll({ top: window.scrollY + movement });
     },
-    []
+    [lastClickOnScrollbar, totalHeight]
   );
   const isTouchDevice = React.useCallback(() => {
     if (typeof window === "undefined") return false;
@@ -77,13 +81,12 @@ const Home: NextPage = () => {
           className={styles.scrollBar}
         >
           <vertical-scroll-behavior
-            on
             start="0"
-            end-pos="-1"
-            repeat="continue"
+            end-pos="100vh"
             start-pos="0"
-            speed="-0.33"
+            end={parseFloat(totalHeight) - 100 + "vh"}
           ></vertical-scroll-behavior>
+          <div className={styles.scrollBarPosition} />
         </div>
       )}
     </div>
