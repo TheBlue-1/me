@@ -8,7 +8,7 @@ import Top from "./components/top";
 import styles from "/styles/home.module.css";
 
 import type { NextPage } from "next";
-import { useTotalHeight } from "./hooks/use-total-height";
+import useTotalHeight from "./hooks/use-total-height";
 const Home: NextPage = () => {
   React.useEffect(() => {
     const loadingScrollBehavior = import("custom-scroll-behaviors");

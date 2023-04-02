@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 
-export function useTotalHeight() {
+export default function useTotalHeight() {
   const [height, setHeight] = useState("100.00");
   useLayoutEffect(() => {
     function updateHeight() {
