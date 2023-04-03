@@ -25,7 +25,7 @@ const Profiles: NextPage = () => {
             , <a href="https://discord.com/invite/dkCPEmr8eb">Server</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/maximilian-m-73b25b180/">
+            <a href="https://www.linkedin.com/in/maximilian-mayrhofer/">
               LinkedIn
             </a>
           </li>
