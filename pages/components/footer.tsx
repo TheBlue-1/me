@@ -11,7 +11,7 @@ const Footer: NextPage = () => {
           Wendelin Muth: <a href="https://wendelin-muth.cf">wendelin-muth.cf</a>
         </li>
       </ul>
-      <p className={styles.footerText}>@2022</p>
+      <p className={styles.footerText}>©2023</p>
     </footer>
   );
 };
